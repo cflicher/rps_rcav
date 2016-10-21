@@ -6,12 +6,14 @@ class GameController < ApplicationController
     moves = ["rock", "paper", "scissors"]
 
     @computer_move = moves.sample
+    @imsrc = "/assets/images/#{@computer_move}.png"
 
     render("game/play_rock.html.erb")
+
   end
 
 
-# ----------------------------
+  # ----------------------------
 
 
   def user_plays_paper
@@ -19,6 +21,7 @@ class GameController < ApplicationController
     moves = ["rock", "paper", "scissors"]
 
     @computer_move = moves.sample
+    @imsrc = "/assets/images/#{@computer_move}.png"
 
     render("game/play_paper.html.erb")
   end
@@ -31,6 +34,7 @@ class GameController < ApplicationController
     moves = ["rock", "paper", "scissors"]
 
     @computer_move = moves.sample
+    @imsrc = "/assets/images/#{@computer_move}.png"
 
     render("game/play_scissors.html.erb")
   end
